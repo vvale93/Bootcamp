@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form</title>
+</head>
+<body>
+    <form>
+        <label for="firstName">First Name: </label><input type="text" name="firstName" placeholder="Your name" required><br>
+        <label for="lastName">Last Name: </label><input type="text" name="lastName" placeholder="Your last name" required><br>
+        <label for="userEmail">E-mail: </label><input type="email" name="userEmail" placeholder="Your e-mail" required><br>
+        <label for="userBirthday">Birthday: </label><input type="date" name="userBirthday" required><br>
+        <label for="favSport">Favourite sport? </label>
+        <select name="favSport" required>
+            <option value="soccer">Soccer</option>
+            <option value="basketball">Basketball</option>
+            <option value="tennis">Tennis</option>
+            <option value="voleyball">Voleyball</option>
+        </select><br>
+        <label for="userBio">Tell us about you: </label><textarea name="userBio" placeholder="Small bio" required></textarea><br>
+        <input type="submit" value="Submit"> 
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
