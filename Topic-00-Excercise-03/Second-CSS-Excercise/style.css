@@ -1,0 +1,101 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;   
+}
+
+@media screen and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) 
+{
+  .column
+  {
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    display: inline-block;          
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 700px) 
+{
+  .column
+  {
+    position: relative;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    display: inline-block;         
+  }
+}
+
+@media screen and (min-width: 1001px) 
+{
+  .column
+  {
+      
+      position: relative;
+      width: 30%;
+      height: auto;
+      display: inline-block;         
+  }
+}
+
+.image
+{
+  width: 100%;
+}
+
+.row
+{
+    width: 100%;
+    height: auto;    
+    margin-left: 1px;
+}
+
+.screen 
+{
+    background-color: rgba(231, 225, 225, 0.336);
+    left: 0;
+    top: 0;
+    height: 20%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    z-index: 1000;
+    -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+          -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+}
+
+.screen:hover 
+{
+  opacity: 1;
+}
+
+.title 
+{
+  color: #fff;
+  font-family: arial, helvetica, sans-serif;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+  font-size: 2em;
+  margin-top: 0px;
+}
+
+.screen:hover .title 
+{
+  margin-left: 0;
+}
+
+.screen.fade-in .title 
+{
+  margin-left: 0;
+}
+

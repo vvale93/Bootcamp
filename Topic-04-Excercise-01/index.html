@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Another really awesome page</h1>
+    <section>
+        <article>
+            <h1>Local Storage</h1>
+            <textarea class="textAreaLS" id="textAreaLS">
+            </textarea>
+            <button class="button" id="saveButtonLS" onclick="saveTextLS()">Save</button>
+            <button class="button" id="clearButtonLS" onclick="clearTextLS()">Clear</button>
+        </article>
+        <article>
+            <h1>Indexed Db</h1>
+            <textarea class="textAreaDB" id="textAreaDB">
+            </textarea>
+            <button class="button" type="button" id="saveButtonDB" onclick="saveTextDB()">Save</button>
+            <button class="button" type="button" id="clearButtonDB" onclick="clearTextDB()">Clear</button>
+        </article>
+        
+    </section>
+
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<div class="tabset">
+  <ngb-tabset>
+    <ngb-tab>
+      <ng-template ngbTabTitle>
+        <span class="green bold">
+          2v2
+        </span>
+      </ng-template>
+      <ng-template ngbTabContent>
+        <ol>
+          <li *ngFor="let user2v2 of users2v2 | slice:0:10">
+            <a  class="green" [routerLink]="['/character', user2v2.realmName, user2v2.name]">{{ user2v2.name }}</a>
+            <hr/>
+          </li>
+        </ol>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab>
+      <ng-template ngbTabTitle>
+        <span class="green bold">
+          3v3
+        </span>
+      </ng-template>
+      <ng-template ngbTabContent>
+        <ol>
+          <li *ngFor="let user3v3 of users3v3 | slice:0:10">
+            <a  class="green" [routerLink]="['/character', user3v3.realmName, user3v3.name]">{{ user3v3.name }}</a>
+            <hr/>
+          </li>          
+        </ol>
+      </ng-template>
+    </ngb-tab>    
+    <ngb-tab>
+      <ng-template ngbTabTitle>
+        <span class="green bold">
+          RBG
+        </span>
+      </ng-template>
+      <ng-template ngbTabContent>
+        <ol>
+          <li *ngFor="let userRBG of usersRBG | slice:0:10">
+            <a  class="green" [routerLink]="['/character', userRBG.realmName, userRBG.name]">{{ userRBG.name }}</a>
+            <hr/>
+          </li>
+        </ol>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>

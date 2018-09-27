@@ -1,0 +1,237 @@
+<section class="container-fluid body">
+  <article class="charTrue" *ngIf="char">
+    <div class="photoAndName">
+      <img class="charImg" src={{imagePath}} />
+      <span class="charInfo">
+        {{ char.name }}({{ char.level }}) - {{ char.realm }}
+      </span>
+    </div>
+    <div class="information">
+      <ngb-tabset>
+        <ngb-tab>
+          <ng-template ngbTabTitle>
+            <span class="green bold">
+              Character
+            </span>
+          </ng-template>
+          <ng-template ngbTabContent>
+            <div class="row">
+              <div class="col-sm">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Basic information</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>Name</th>
+                      <td>{{ char.name }}</td>
+                    </tr>
+                    <tr>
+                      <th>Class</th>
+                      <td *ngIf="charClass">{{charClass.name}}</td>
+                    </tr>
+                    <tr>
+                      <th>Race</th>
+                      <td *ngIf="race">{{race.name}}</td>
+                    </tr>
+                    <tr>
+                      <th>Gender</th>
+                      <td *ngIf="char.gender === 0">Male</td>
+                      <td *ngIf="char.gender === 1">Female</td>
+                    </tr>
+                    <tr>
+                      <th>Level</th>
+                      <td>{{ char.level }}</td>
+                    </tr>
+                    <tr>
+                      <th>Achievement Points</th>
+                      <td>{{ char.achievementPoints }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-sm">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Guild Information</th>
+                    </tr>
+                  </thead>
+                  <ng-container *ngIf="guildInfo!==null">
+                    <tbody>
+                      <tr>
+                        <th>Name</th>
+                        <td>
+                          <a class="green" [routerLink]="['/guild/' + guildInfo.guild.realm +'/'+ guildInfo.guild.name]">
+                            {{guildInfo.guild.name}}
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Realm</th>
+                        <td>{{guildInfo.guild.realm}}</td>
+                      </tr>
+                      <tr>
+                        <th>Battlegroup</th>
+                        <td>{{guildInfo.guild.battlegroup}}</td>
+                      </tr>
+                      <tr>
+                        <th>Members</th>
+                        <td>{{guildInfo.guild.members}}</td>
+                      </tr>
+                      <tr>
+                        <th>Achievement points</th>
+                        <td>{{guildInfo.guild.achievementPoints}}</td>
+                      </tr>
+                    </tbody>
+                  </ng-container>
+                </table>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab>
+          <ng-template ngbTabTitle>
+            <span class="green bold">
+              PVP
+            </span>
+          </ng-template>
+          <ng-template ngbTabContent>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>2v2</th>
+                  <th>3v3</th>
+                  <th>RBG</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Rating</th>
+                  <td>{{pvpInfo.pvp.brackets.ARENA_BRACKET_2v2.rating}}</td>
+                  <td>{{pvpInfo.pvp.brackets.ARENA_BRACKET_3v3.rating}}</td>
+                  <td>{{pvpInfo.pvp.brackets.ARENA_BRACKET_RBG.rating}}</td>
+                </tr>
+                <tr>
+                  <th>Weekly played</th>
+                  <td>{{pvpInfo.pvp.brackets.ARENA_BRACKET_2v2.weeklyPlayed}}</td>
+                  <td>{{pvpInfo.pvp.brackets.ARENA_BRACKET_3v3.weeklyPlayed}}</td>
+                  <td>{{pvpInfo.pvp.brackets.ARENA_BRACKET_RBG.weeklyPlayed}}</td>
+                </tr>
+                <tr>
+                  <th>Weekly won</th>
+                  <td>{{pvpInfo.pvp.brackets.ARENA_BRACKET_2v2.weeklyWon}}</td>
+                  <td>{{pvpInfo.pvp.brackets.ARENA_BRACKET_3v3.weeklyWon}}</td>
+                  <td>{{pvpInfo.pvp.brackets.ARENA_BRACKET_RBG.weeklyWon}}</td>
+                </tr>
+                <tr>
+                  <th>Weekly lost</th>
+                  <td>{{pvpInfo.pvp.brackets.ARENA_BRACKET_2v2.weeklyLost}}</td>
+                  <td>{{pvpInfo.pvp.brackets.ARENA_BRACKET_3v3.weeklyLost}}</td>
+                  <td>{{pvpInfo.pvp.brackets.ARENA_BRACKET_RBG.weeklyLost}}</td>
+                </tr>
+                <tr>
+                  <th>Season played</th>
+                  <td>{{pvpInfo.pvp.brackets.ARENA_BRACKET_2v2.seasonPlayed}}</td>
+                  <td>{{pvpInfo.pvp.brackets.ARENA_BRACKET_3v3.seasonPlayed}}</td>
+                  <td>{{pvpInfo.pvp.brackets.ARENA_BRACKET_RBG.seasonPlayed}}</td>
+                </tr>
+                <tr>
+                  <th>Season won</th>
+                  <td>{{pvpInfo.pvp.brackets.ARENA_BRACKET_2v2.seasonWon}}</td>
+                  <td>{{pvpInfo.pvp.brackets.ARENA_BRACKET_3v3.seasonWon}}</td>
+                  <td>{{pvpInfo.pvp.brackets.ARENA_BRACKET_RBG.seasonWon}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab>
+          <ng-template ngbTabTitle>
+            <span class="green bold">
+              Stats
+            </span>
+          </ng-template>
+          <ng-template ngbTabContent>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Stats information</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Health</th>
+                  <td>{{ charStats.stats.health }}</td>
+                </tr>
+                <tr>
+                  <th>Powertype</th>
+                  <td>{{charStats.stats.powerType}}</td>
+                </tr>
+                <tr>
+                  <th>Power</th>
+                  <td>{{charStats.stats.power}}</td>
+                </tr>
+                <tr>
+                  <th>Strength</th>
+                  <td>{{charStats.stats.str}}</td>
+                </tr>
+                <tr>
+                  <th>Agility</th>
+                  <td>{{charStats.stats.agi}}</td>
+                </tr>
+                <tr>
+                  <th>Intelect</th>
+                  <td>{{charStats.stats.int}}</td>
+                </tr>
+                <tr>
+                  <th>Stamina</th>
+                  <td>{{charStats.stats.sta}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab>
+          <ng-template ngbTabTitle>
+            <span class="green bold">
+              Items
+            </span>
+          </ng-template>
+          <ng-template ngbTabContent>
+            <p class="green bold aRight">
+              Average Item Level: {{userItems.items.averageItemLevel}} - Average Item Level (Equiped): {{userItems.items.averageItemLevelEquipped}}
+            </p>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Icon</th>
+                  <th>Name</th>
+                  <th>Item Level</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of itemsCollection">
+                  <td>
+                    <img src={{imgLink+item.icon+imgType}}>
+                  </td>
+                  <td>{{item.name}}</td>
+                  <td>{{item.itemLevel}}</td>
+                </tr>
+              </tbody>
+            </table>             
+          </ng-template>
+        </ngb-tab>
+      </ngb-tabset>
+    </div>
+  </article>
+  <article *ngIf="!char">
+    Ooops! There was a mistake, please come back later!
+  </article>
+</section>

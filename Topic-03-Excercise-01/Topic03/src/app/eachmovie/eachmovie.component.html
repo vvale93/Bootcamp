@@ -1,0 +1,36 @@
+<section  *ngIf="movie">
+  <article>
+    <ul>
+      <li>
+        {{ movie.title }}
+        <input type="text" class="hide" [(ngModel)]="movie.title" id="changeTitle">
+        <button (click)="edit('changeTitle','editTitle')" class="edit" id="editTitle">
+          Edit
+        </button>
+        <button (click)="done('editTitle')" class="hide">
+          Done
+        </button>
+      </li>
+      <li>
+        {{ movie.year }}
+        <input type="number" class="hide" [(ngModel)]="movie.year" id="changeYear">
+        <button (click)="edit('changeYear', 'editYear')" class="edit" id="editYear">
+          Edit
+        </button>
+        <button (click)="done('editYear')" class="hide">
+          Done
+        </button>
+      </li>
+      <li>
+        {{ movie.director }}
+        <input type="text" class="hide" [(ngModel)]="movie.director" id="changeDirector">
+        <button (click)="edit('changeDirector', 'editDirector')" class="edit" id="editDirector">
+          Edit
+        </button>
+        <button (click)="done('editDirector')" class="hide">
+          Done
+        </button>
+      </li>
+    </ul>
+  </article>  
+</section>

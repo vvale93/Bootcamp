@@ -1,0 +1,13 @@
+<section class="container-fluid body">
+  <article *ngIf="users">
+    <h1 class="title">Top 100 RBG players:</h1>
+    <ol class="list-group">
+      <li class="list-group-item" *ngFor="let user of users| slice:0:100">
+        <a class="green" [routerLink]="['/character', user.realmName, user.name]">{{ user.name }}</a>
+      </li>
+    </ol>    
+  </article>
+  <article *ngIf="!users">
+    Ooops! There was a mistake, please come back later.
+  </article>
+</section>

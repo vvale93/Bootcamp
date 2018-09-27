@@ -1,0 +1,43 @@
+.body {
+    margin-top: 100px;
+}
+
+.photoAndName {
+    background-color:rgba(217, 227, 219, 0.85);
+    -webkit-border-radius:.25rem;
+    -moz-border-radius: .25rem;
+    border-radius: .25rem;
+}
+
+.guildImg { 
+    -webkit-border-top-left-radius: .25rem;
+    -webkit-border-bottom-left-radius: .25rem;
+    -moz-border-radius-topleft: .25rem;
+    -moz-border-radius-bottomleft: .25rem;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+   
+}
+
+.guildCharImg{
+    background-image: url("../../assets/thumbnail404.jpg");
+    width: 84px;
+    height: 84px;
+}
+
+.guildInfo {
+    font-size: 40px;
+    vertical-align: middle;   
+}
+
+.information {
+    background-color:rgba(217, 227, 219, 0.85);
+    -webkit-border-radius: .25rem;
+    -moz-border-radius: .25rem;
+    border-radius: .25rem;
+    margin-top: .25rem;
+}
+
+.green {
+    color: #3a893a;
+}

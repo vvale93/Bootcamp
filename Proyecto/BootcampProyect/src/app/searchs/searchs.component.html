@@ -1,0 +1,31 @@
+<div class="searchBox"><h1 class="title">Are you looking for a character?</h1>
+<form>
+    <label for="characterName">Character name:</label>
+    <input type="text" class="input" name="characterName" [(ngModel)]="charName" placeholder="Dodita" required>
+    <label for="characterRealm">Realm:</label>
+    <select class="custom-select input" [(ngModel)]="charRealm" name="realmC">
+        <option *ngFor="let realmC of realms" [value]="realmC.name">{{realmC.name}}</option>
+    </select>
+    <button type="button" class="btn" (click)="getCharacter(charName, charRealm)">Search</button>
+</form>
+<a [routerLink]="['/character/' + char?.realm +'/'+ char?.name]">
+    <div id="character">  
+    </div>
+</a>
+</div>
+<div class="searchBox secondSB">
+<h1 class="title">Or do you want to look for a guild?</h1>
+<form>
+    <label for="guildName">Guild name:</label>
+    <input type="text" class="input" name="guildName" [(ngModel)]="guildName" placeholder="Its show time" required>
+    <label for="guildRealm">Realm:</label>
+    <select class="custom-select input" [(ngModel)]="guildRealm" name="realmG">
+        <option *ngFor="let realmG of realms" [value]="realmG.name">{{realmG.name}}</option>
+    </select>
+    <button type="button" class="btn" (click)="getGuild(guildName, guildRealm)">Search</button>
+</form>
+<a [routerLink]="['/guild/' + guild?.realm +'/'+ guild?.name]">
+    <div id="guild">
+    </div>
+</a>
+</div>

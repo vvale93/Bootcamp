@@ -1,0 +1,23 @@
+<section *ngIf="movieList">
+  <article *ngIf="movieList.length">
+    <h1>Movie List</h1>
+    <ul>
+      <li *ngFor="let movie of movieList; let i = index">
+        <a [routerLink]="['/movie', movie.id]">
+          {{ movie.title }}
+        </a>
+        <button (click)="deleteMovie(i)">X</button>
+      </li>
+    </ul>
+  </article>
+  <article *ngIf="!movieList.length">
+    <h1> There is no movies :(</h1>
+  </article>
+  <h2>Agregar Item</h2>    
+    <input type="text" name="title">
+    <input type="number" name="year">
+    <input type="text" name="director">
+    <button (click)="addMovie(newTitle.value, newYear.value, newDirector.value)">
+      Add new movie
+    </button>
+</section>

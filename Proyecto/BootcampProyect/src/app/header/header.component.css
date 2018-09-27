@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'LifeCraft';
+    src: url('/assets/LifeCraft_Font.ttf');
+}
+
+.navbar-brand {
+    font-family: LifeCraft;
+    font-size: 60px;
+    color: #DAA520;
+    text-decoration: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #e8e361;
+}
+
+.btn-outline {
+    color: #3a893a;
+    border-color: #3a893a;
+    background-color: #343a40;
+}
+
+.btn-outline:hover {
+    color: #fff;
+    background-color: #3a893a;
+    border-color: #3a893a;
+}
+.btn:focus {
+    box-shadow: 0 0 0 0.2rem #3a893a59;
+}
+
+.dropdown-item:active:focus {
+    background-color: #3a893a;
+}

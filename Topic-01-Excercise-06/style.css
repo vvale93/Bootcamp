@@ -1,0 +1,20 @@
+.table
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+.tableHeader
+{
+    height: 50px;
+    text-align: left;
+}
+
+.table, .tableHeader, .tableElement
+{
+    border: 1px solid grey;
+}
+
+.tableHeader, .tableElement
+{
+    padding: 15px;
+}

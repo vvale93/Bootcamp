@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Rogue One",
+        "year": 2016,
+        "director": "Gareth Edwards",
+        "id": 1
+    },
+    {
+        "title": "Wreck-it Ralph",
+        "year": 2013,
+        "director": "Rich Moore",
+        "id": 2
+    },
+    {
+        "title": "Megamind",
+        "year": 2010,
+        "director": "Tom McGrath",
+        "id": 3
+    },
+    {
+        "title": "The wolf of Wallstreet",
+        "year": 2014,
+        "director": "Martin Scorsese",
+        "id": 4
+    },
+    {
+        "title": "The SpongeBob SquarePants Movie",
+        "year": 2004,
+        "director": "Stephen Hillenburg",
+        "id": 5
+    }
+]

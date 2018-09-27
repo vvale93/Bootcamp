@@ -1,0 +1,20 @@
+{
+  "name": "topic-02",
+  "version": "1.0.0",
+  "description": "Design Patterns and OOP in JavaScript",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "transpile": "babel script.js --out-file script-transpiled.js"
+  },
+  "author": "Valeria Ovando",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "rollup-plugin-babel": "^3.0.2"
+  },
+  "dependencies": {
+    "rollup": "^0.50.0"
+  }
+}

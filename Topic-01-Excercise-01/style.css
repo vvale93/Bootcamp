@@ -1,0 +1,9 @@
+.hidden
+{
+    visibility: hidden;
+}
+
+.center, .header, .section
+{
+    text-align: center;
+}

@@ -1,0 +1,19 @@
+<div class="container-fluid body">
+    <h1 class="title">List of realms</h1>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let realm of realms">
+            <div class="bold" *ngIf="realm.population === 'low'" class="green">
+                {{realm.name}}
+            </div>
+            <div class="bold" *ngIf="realm.population === 'medium'" class="orange">
+                {{realm.name}}
+            </div>
+            <div class="bold" *ngIf="realm.population === 'full'" class="red">
+                {{realm.name}}
+            </div>
+            <div class="bold" *ngIf="realm.population === 'n/a'">
+                {{realm.name}} (We don't have information right now)
+            </div>
+        </li>
+    </ul>
+</div>

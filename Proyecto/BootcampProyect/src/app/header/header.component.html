@@ -1,0 +1,21 @@
+<nav class="navbar fixed-top navbar-expand navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Azeroth stats</a>
+  <ul class="nav navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Home</a>
+    </li>
+    <li ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline" id="dropdownBasic1" ngbDropdownToggle>
+        PVP Leaderboards
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <a routerLink="/leaderboard2v2" class="dropdown-item">2v2</a>
+        <a routerLink="/leaderboard3v3" class="dropdown-item">3v3</a>
+        <a routerLink="/leaderboardRBG" class="dropdown-item">RBG</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/realms-status">Realms status</a>
+    </li>        
+  </ul>
+</nav>

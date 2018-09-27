@@ -1,0 +1,15 @@
+.tabset {
+    background-color:rgba(217, 227, 219, 0.85);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.green {
+    color: #3a893a;
+}
+
+ .bold {
+     font-weight: bold;
+ }
+ 
